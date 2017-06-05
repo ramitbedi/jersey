@@ -39,6 +39,9 @@
  */
 package org.glassfish.jersey.examples.helloworld.netty;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.CountDownLatch;
@@ -49,6 +52,7 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.InvocationCallback;
 import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.Configuration;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
@@ -61,15 +65,20 @@ import org.glassfish.jersey.test.TestProperties;
 import org.glassfish.jersey.test.netty.NettyTestContainerFactory;
 import org.glassfish.jersey.test.spi.TestContainerException;
 import org.glassfish.jersey.test.spi.TestContainerFactory;
-import org.glassfish.jersey.test.util.runner.ConcurrentRunner;
 import org.glassfish.jersey.test.util.runner.RunSeparately;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@RunWith(ConcurrentRunner.class)
+import com.ebay.jaxrs.client.config.ConfigurationBuilder;
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
+//@RunWith(ConcurrentRunner.class)
+@RunWith(RaptorIOSpringRunner.class)
+@SpringBootTest(properties = { "GingerClient.testService.testReqIdClient.endpointUri=http://localhost",
+	    "GingerClient.testService.testReqIdClient.readTimeout=1000",
+	    "GingerClient.testService.testReqIdClient.hystrixEnabled=false"})
 public class HelloWorldTest extends JerseyTest {
 
     @Override
@@ -252,5 +261,15 @@ public class HelloWorldTest extends JerseyTest {
         assertEquals(HelloWorldResource.CLICHED_MESSAGE, s);
         assertEquals(1, CustomLoggingFilter.preFilterCalled);
         assertEquals(1, CustomLoggingFilter.postFilterCalled);
+    }
+    
+    
+    
+    @Test
+    public void testClientStringResponse_ginger() {
+        Configuration cc = ConfigurationBuilder.newConfig("testService.testReqIdClient");
+        Client client = ClientBuilder.newClient(cc);
+        String s = client.target(getTestContainer().getBaseUri()).path(App.ROOT_PATH).request().get(String.class);
+        assertEquals(HelloWorldResource.CLICHED_MESSAGE, s);
     }
 }

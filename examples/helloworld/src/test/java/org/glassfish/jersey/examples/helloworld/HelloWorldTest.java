@@ -39,6 +39,9 @@
  */
 package org.glassfish.jersey.examples.helloworld;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.CountDownLatch;
@@ -56,17 +59,14 @@ import javax.ws.rs.core.UriBuilder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-import org.glassfish.jersey.test.util.runner.ConcurrentRunner;
 import org.glassfish.jersey.test.util.runner.RunSeparately;
-
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-@RunWith(ConcurrentRunner.class)
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+//@RunWith(ConcurrentRunner.class)
+@RunWith(RaptorIOSpringRunner.class)
 public class HelloWorldTest extends JerseyTest {
 
     @Override

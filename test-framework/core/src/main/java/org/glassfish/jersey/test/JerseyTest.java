@@ -257,7 +257,7 @@ public abstract class JerseyTest {
      *
      * @return a test container instance or {@code null} if the container is not set.
      */
-    /* package */ TestContainer getTestContainer() {
+    protected TestContainer getTestContainer() {
         return testContainer;
     }
 

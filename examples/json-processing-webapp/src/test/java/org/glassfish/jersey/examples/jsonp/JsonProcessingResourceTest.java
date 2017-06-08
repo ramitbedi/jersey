@@ -49,7 +49,6 @@ import javax.ws.rs.core.Application;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
-
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
@@ -57,17 +56,20 @@ import javax.json.JsonNumber;
 import javax.json.JsonObject;
 
 import org.glassfish.jersey.test.JerseyTest;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
 import jersey.repackaged.com.google.common.collect.Lists;
 import jersey.repackaged.com.google.common.collect.Sets;
 
 /**
  * @author Michal Gajdos
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class JsonProcessingResourceTest extends JerseyTest {
 
     private static final List<JsonObject> documents = Lists.newArrayList();

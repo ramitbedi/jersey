@@ -46,6 +46,9 @@ import org.glassfish.jersey.examples.bookstore.webapp.MyApplication;
 import org.glassfish.jersey.server.mvc.jsp.JspMvcFeature;
 import org.glassfish.jersey.servlet.ServletProperties;
 import org.glassfish.jersey.test.JerseyTest;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -55,6 +58,7 @@ import static org.junit.Assert.assertTrue;
  * @author Naresh
  * @author Michal Gajdos
  */
+@RunWith(RaptorIOSpringRunner.class)
 public abstract class TestSupport extends JerseyTest {
 
     @Override

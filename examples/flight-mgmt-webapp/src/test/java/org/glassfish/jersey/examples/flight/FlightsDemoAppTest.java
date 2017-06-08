@@ -54,9 +54,12 @@ import org.glassfish.jersey.message.MessageProperties;
 import org.glassfish.jersey.moxy.xml.MoxyXmlFeature;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -69,6 +72,7 @@ import static org.junit.Assert.fail;
  *
  * @author Marek Potociar (marek.potociar at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class FlightsDemoAppTest extends JerseyTest {
 
     @Override

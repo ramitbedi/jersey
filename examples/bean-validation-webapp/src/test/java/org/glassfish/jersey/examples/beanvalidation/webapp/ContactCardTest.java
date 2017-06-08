@@ -62,10 +62,13 @@ import org.glassfish.jersey.server.validation.ValidationError;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
 import org.glassfish.jersey.test.external.ExternalTestContainerFactory;
-
 import org.eclipse.persistence.jaxb.BeanValidationMode;
 import org.eclipse.persistence.jaxb.MarshallerProperties;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -73,6 +76,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * @author Michal Gajdos
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class ContactCardTest extends JerseyTest {
 
     private static final ContactCard CARD_1;

@@ -45,8 +45,11 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
 import static org.junit.Assert.assertEquals;
 
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
 import com.sun.net.httpserver.HttpServer;
 
 /**
@@ -54,6 +57,7 @@ import com.sun.net.httpserver.HttpServer;
  *
  * @author Martin Matula
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class HelloWorldTest {
     @Test
     public void testHelloWorld() throws Exception {

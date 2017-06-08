@@ -42,17 +42,20 @@ package org.glassfish.jersey.examples.hello.spring.annotations;
 import javax.ws.rs.core.Application;
 
 import org.glassfish.jersey.test.JerseyTest;
-
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
 
 /**
  * Testing our service with our annotation context being passed directly to jersey-spring
  *
  * @author Geoffroy Warin (http://geowarin.github.io)
  */
+//@RunWith(RaptorIOSpringRunner.class)
 public class SpringRequestResourceTest extends JerseyTest {
 
     @Override

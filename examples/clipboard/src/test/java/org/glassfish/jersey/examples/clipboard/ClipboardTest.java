@@ -48,11 +48,14 @@ import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.runner.RunWith;
 
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
+import static org.junit.Assert.assertEquals;
+@RunWith(RaptorIOSpringRunner.class)
 public class ClipboardTest extends JerseyTest {
 
     @Override

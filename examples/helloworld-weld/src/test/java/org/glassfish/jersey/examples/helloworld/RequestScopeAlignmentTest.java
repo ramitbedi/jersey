@@ -46,13 +46,14 @@ import javax.ws.rs.client.WebTarget;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
-
 import org.jboss.weld.environment.se.Weld;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.startsWith;
@@ -63,6 +64,7 @@ import static org.junit.Assert.assertThat;
  *
  * @author Jakub Podlesak (jakub.podlesak at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class RequestScopeAlignmentTest extends JerseyTest {
 
     static Weld weld;

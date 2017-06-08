@@ -125,7 +125,7 @@ public abstract class JerseyTestNg extends JerseyTest {
     }
 
     @Override
-    /* package */ final TestContainer getTestContainer() {
+    protected final TestContainer getTestContainer() {
         return strategy.testContainer();
     }
 

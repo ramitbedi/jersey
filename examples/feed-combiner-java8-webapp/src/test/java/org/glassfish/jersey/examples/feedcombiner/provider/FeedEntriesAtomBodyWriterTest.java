@@ -50,18 +50,19 @@ import java.util.List;
 import javax.ws.rs.core.MediaType;
 
 import org.glassfish.jersey.examples.feedcombiner.model.FeedEntry;
-
 import org.glassfish.hk2.utilities.reflection.ParameterizedTypeImpl;
-
 import org.easymock.EasyMockRule;
 import org.easymock.TestSubject;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.xml.sax.InputSource;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
 import com.sun.syndication.feed.synd.SyndEntry;
 import com.sun.syndication.feed.synd.SyndFeed;
 import com.sun.syndication.io.SyndFeedInput;
@@ -69,6 +70,7 @@ import com.sun.syndication.io.SyndFeedInput;
 /**
  * @author Petr Bouda (petr.bouda at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class FeedEntriesAtomBodyWriterTest {
 
     private static final Date DATE = new Date();

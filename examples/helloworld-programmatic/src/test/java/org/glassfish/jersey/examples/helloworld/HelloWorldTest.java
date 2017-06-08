@@ -46,12 +46,15 @@ import javax.ws.rs.core.UriBuilder;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-
+@RunWith(RaptorIOSpringRunner.class)
 public class HelloWorldTest extends JerseyTest {
 
     @Override

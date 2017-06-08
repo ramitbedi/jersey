@@ -45,8 +45,11 @@ import javax.ws.rs.core.Response;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -55,6 +58,7 @@ import static org.junit.Assert.assertThat;
  *
  * @author Michal Gajdos
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class HelloWorldTest extends JerseyTest {
 
     @Override

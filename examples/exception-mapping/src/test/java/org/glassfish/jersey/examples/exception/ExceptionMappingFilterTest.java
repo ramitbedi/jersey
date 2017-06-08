@@ -46,8 +46,11 @@ import javax.ws.rs.core.UriBuilder;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.glassfish.jersey.examples.exception.ExceptionResource.MyResponseFilter;
 import static org.glassfish.jersey.examples.exception.Exceptions.MyExceptionMapper;
 import static org.glassfish.jersey.examples.exception.Exceptions.MySubExceptionMapper;
@@ -60,6 +63,7 @@ import static org.junit.Assert.assertTrue;
  *
  * @author Santiago.PericasGeertsen at oracle.com
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class ExceptionMappingFilterTest extends JerseyTest {
 
     @Override

@@ -41,7 +41,6 @@ package org.glassfish.jersey.examples.httppatch;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
-
 import javax.json.Json;
 import javax.json.JsonArray;
 
@@ -49,8 +48,11 @@ import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.grizzly.connector.GrizzlyConnectorProvider;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -58,6 +60,7 @@ import static org.junit.Assert.assertEquals;
  *
  * @author Marek Potociar (marek.potociar at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class HttpPatchTest extends JerseyTest {
 
     @Override

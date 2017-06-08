@@ -42,6 +42,10 @@ package org.glassfish.jersey.examples.bookstore.webapp.resource;
 import javax.ws.rs.client.WebTarget;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -50,6 +54,7 @@ import static org.junit.Assert.assertNotNull;
  * @author Naresh
  * @author Michal Gajdos
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class ItemTest extends TestSupport {
 
     @Test

@@ -40,6 +40,9 @@
 package org.glassfish.jersey.examples.cdi.resources;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
 
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.CoreMatchers.containsString;
@@ -49,6 +52,7 @@ import static org.hamcrest.CoreMatchers.containsString;
  *
  * @author Jakub Podlesak (jakub.podlesak at oracle.com)
  */
+//@RunWith(RaptorIOSpringRunner.class)
 public class HelloworldTest extends CdiTest {
 
     @Test

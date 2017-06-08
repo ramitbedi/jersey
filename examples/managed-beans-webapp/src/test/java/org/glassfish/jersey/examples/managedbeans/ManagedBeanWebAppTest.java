@@ -50,8 +50,11 @@ import javax.ws.rs.core.UriBuilder;
 import org.glassfish.jersey.examples.managedbeans.resources.MyApplication;
 import org.glassfish.jersey.message.internal.MediaTypes;
 import org.glassfish.jersey.test.JerseyTest;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
@@ -68,6 +71,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  * @author Naresh Srinivas Bhimisetty
  * @author Jakub Podlesak (jakub.podlesak at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class ManagedBeanWebAppTest extends JerseyTest {
 
     @Override

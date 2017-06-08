@@ -51,13 +51,16 @@ import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.external.ExternalTestContainerFactory;
 import org.glassfish.jersey.test.spi.TestContainerException;
 import org.glassfish.jersey.test.spi.TestContainerFactory;
-
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONObject;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -69,6 +72,7 @@ import static org.junit.Assert.assertTrue;
  * @author Michal Gajdos
  */
 @Ignore("un-ignore once Jersey supports @ManagedBean")
+@RunWith(RaptorIOSpringRunner.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BookmarkTest extends JerseyTest {
 

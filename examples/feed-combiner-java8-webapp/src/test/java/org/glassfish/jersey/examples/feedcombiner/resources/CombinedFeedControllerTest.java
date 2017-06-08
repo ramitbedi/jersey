@@ -70,19 +70,22 @@ import org.glassfish.jersey.server.ServerProperties;
 import org.glassfish.jersey.server.mvc.freemarker.FreemarkerMvcFeature;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-
 import org.apache.commons.lang3.SerializationUtils;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.glassfish.jersey.examples.feedcombiner.resources.CombinedFeedTestHelper.feedEntries;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
 import static javax.ws.rs.core.MediaType.TEXT_HTML_TYPE;
 
 /**
  * @author Petr Bouda (petr.bouda at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class CombinedFeedControllerTest extends JerseyTest {
 
     // Prepare entities for testing

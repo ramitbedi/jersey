@@ -47,13 +47,17 @@ import javax.ws.rs.core.UriBuilder;
 import org.glassfish.jersey.server.mvc.freemarker.FreemarkerMvcFeature;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertTrue;
 
 /**
  * @author Pavel Bucek (pavel.bucek at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class FreemarkerTest extends JerseyTest {
 
     @Override

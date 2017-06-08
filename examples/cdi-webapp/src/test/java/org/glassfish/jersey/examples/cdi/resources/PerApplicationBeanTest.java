@@ -43,6 +43,9 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.containsString;
@@ -52,6 +55,7 @@ import static org.hamcrest.CoreMatchers.containsString;
  *
  * @author Jakub Podlesak (jakub.podlesak at oracle.com)
  */
+//@RunWith(RaptorIOSpringRunner.class)
 public class PerApplicationBeanTest extends CdiTest {
 
     @Test

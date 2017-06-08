@@ -51,14 +51,18 @@ import org.glassfish.jersey.examples.managedclientsimple.resources.ManagedClient
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.external.ExternalTestContainerFactory;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 
 /**
  * @author Miroslav Fuksa
  *
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class ManagedClientSimpleTest extends JerseyTest {
 
     @Override

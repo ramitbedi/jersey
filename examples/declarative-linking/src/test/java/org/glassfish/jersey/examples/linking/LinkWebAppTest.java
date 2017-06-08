@@ -50,8 +50,11 @@ import org.glassfish.jersey.linking.DeclarativeLinkingFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
@@ -60,6 +63,7 @@ import static org.junit.Assert.assertEquals;
  * @author Naresh (Srinivas.Bhimisetty@Sun.Com)
  * @author Gerard Davison (gerard.davison at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class LinkWebAppTest extends JerseyTest {
 
     @Override

@@ -46,6 +46,9 @@ import javax.ws.rs.core.UriBuilder;
 
 import org.glassfish.jersey.test.JerseyTest;
 import org.jboss.weld.environment.se.Weld;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
 
 /**
  * Test for CDI web application resources.
@@ -57,6 +60,7 @@ import org.jboss.weld.environment.se.Weld;
  *
  * @author Jakub Podlesak (jakub.podlesak at oracle.com)
  */
+//@RunWith(RaptorIOSpringRunner.class)
 public class CdiTest extends JerseyTest {
 
     Weld weld;

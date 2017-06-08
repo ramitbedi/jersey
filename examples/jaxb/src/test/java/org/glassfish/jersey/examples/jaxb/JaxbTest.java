@@ -43,6 +43,7 @@ import java.util.Collection;
 
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.GenericType;
+
 import static javax.ws.rs.client.Entity.xml;
 
 import javax.xml.bind.JAXBElement;
@@ -51,8 +52,11 @@ import javax.xml.namespace.QName;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -62,6 +66,7 @@ import static org.junit.Assert.assertTrue;
  * @author Paul Sandoz
  * @author Marek Potociar (marek.potociar at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class JaxbTest extends JerseyTest {
 
     @Override

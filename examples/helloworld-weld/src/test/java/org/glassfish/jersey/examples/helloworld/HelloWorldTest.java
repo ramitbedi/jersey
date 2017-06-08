@@ -45,8 +45,11 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
 import org.jboss.weld.environment.se.Weld;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -54,6 +57,7 @@ import static org.junit.Assert.assertEquals;
  *
  * @author Jakub Podlesak (jakub.podlesak at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class HelloWorldTest extends JerseyTest {
 
     private Weld weld;

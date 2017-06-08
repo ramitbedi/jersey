@@ -70,20 +70,23 @@ import org.glassfish.jersey.examples.feedcombiner.store.ReadWriteLockDataStore;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-
 import org.apache.commons.lang3.SerializationUtils;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.glassfish.jersey.examples.feedcombiner.resources.CombinedFeedTestHelper.combinedFeed;
 import static org.glassfish.jersey.examples.feedcombiner.resources.CombinedFeedTestHelper.feedEntries;
 import static org.junit.Assert.assertEquals;
-
 import static javax.ws.rs.core.MediaType.APPLICATION_ATOM_XML_TYPE;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON_TYPE;
 
 /**
  * @author Petr Bouda (petr.bouda at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class CombinedFeedResourceTest extends JerseyTest {
 
     private static final String RESOURCE_URI = "feeds";

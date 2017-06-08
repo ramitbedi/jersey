@@ -46,8 +46,11 @@ import javax.ws.rs.core.Response;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -55,6 +58,7 @@ import static org.junit.Assert.assertEquals;
  *
  * @author Marek Potociar (marek.potociar at oracle.com)
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class ManagedClientTest extends JerseyTest {
 
     @Override

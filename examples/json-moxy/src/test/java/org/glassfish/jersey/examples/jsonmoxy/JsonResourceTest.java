@@ -47,14 +47,18 @@ import javax.ws.rs.core.MediaType;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 
 /**
  * @author Pavel Bucek (pavel.bucek at oracle.com)
  * @author Michal Gajdos
  */
+@RunWith(RaptorIOSpringRunner.class)
 public class JsonResourceTest extends JerseyTest {
 
     @Override

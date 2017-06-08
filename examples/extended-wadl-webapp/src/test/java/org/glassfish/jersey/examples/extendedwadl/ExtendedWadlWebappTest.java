@@ -46,7 +46,6 @@ import java.util.logging.Logger;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.core.Response;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
@@ -63,9 +62,12 @@ import org.glassfish.jersey.server.model.Resource;
 import org.glassfish.jersey.server.wadl.internal.WadlUtils;
 import org.glassfish.jersey.test.DeploymentContext;
 import org.glassfish.jersey.test.JerseyTest;
-
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.w3c.dom.Document;
+
+import com.ebay.raptor.test.framework.RaptorIOSpringRunner;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -76,6 +78,7 @@ import static org.junit.Assert.assertTrue;
  * @author Naresh
  * @author Miroslav Fuksa
  */
+//@RunWith(RaptorIOSpringRunner.class)
 public class ExtendedWadlWebappTest extends JerseyTest {
 
     private static final Logger LOGGER = Logger.getLogger(ExtendedWadlWebappTest.class.getName());
